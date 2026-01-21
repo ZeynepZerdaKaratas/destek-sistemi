@@ -1,0 +1,48 @@
+/* --- KART EFEKTLERİ --- */
+.card {
+  transition: all 0.3s ease-in-out;
+  border-radius: 12px !important; /* Köşeleri yumuşat */
+}
+
+/* Mouse ile üzerine gelince kartlar hafifçe yukarı kalksın */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* --- TABLO TASARIMI --- */
+.table th {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+/* --- KRİTİK (ACİL) SATIR ANİMASYONU --- */
+/* Eğer bir satır 'table-danger' sınıfına sahipse (kırmızıysa) yanıp sönsün */
+.table-danger {
+  animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-red {
+  0% {
+    box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.4);
+    background-color: rgba(220, 53, 69, 0.1); /* Açık kırmızı */
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(220, 53, 69, 0);
+    background-color: rgba(220, 53, 69, 0.25); /* Biraz daha koyu */
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(220, 53, 69, 0);
+    background-color: rgba(220, 53, 69, 0.1);
+  }
+}
+
+/* Butonlara yumuşak geçiş ekleme */
+.btn {
+  transition: all 0.2s;
+  border-radius: 8px !important;
+}
+.btn:active {
+  transform: scale(0.95); /* Tıklayınca hafif küçülme hissi */
+}
